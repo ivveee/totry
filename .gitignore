@@ -1,6 +1,4 @@
 /producer/.pytest_cache/
-/resources/kafka_certificates.json
-/resources/db_access_data.json
 /shared/shared.egg-info/
 /shared/website_check_result.egg-info/
 /shared/build/

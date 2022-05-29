@@ -1,0 +1,6 @@
+{
+  "service_uri":"addr.aivencloud.com:27162",
+  "ca_path":"../resources/certificates/ca.pem",
+  "key_path": "../resources/certificates/service.key",
+  "cert_path": "../resources/certificates/service.cert"
+}
