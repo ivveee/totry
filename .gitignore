@@ -1,0 +1,10 @@
+/producer/.pytest_cache/
+/resources/kafka_certificates.json
+/resources/db_access_data.json
+/shared/shared.egg-info/
+/shared/website_check_result.egg-info/
+/shared/build/
+/producer/tests/.pytest_cache/
+/resources/certificates/ca.pem
+/resources/certificates/service.cert
+/resources/certificates/service.key
