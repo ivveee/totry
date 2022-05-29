@@ -25,8 +25,8 @@ To create a table
 CREATE TABLE IF NOT EXISTS public.results_log
 (
     "timestamp" numeric NOT NULL,
-    url text COLLATE pg_catalog."default" NOT NULL,
-    result text COLLATE pg_catalog."default" NOT NULL,
+    url text NOT NULL,
+    result text NOT NULL,
     response_time real,
     regex_result boolean
 )
