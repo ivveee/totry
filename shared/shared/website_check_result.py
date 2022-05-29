@@ -22,8 +22,10 @@ class WebsiteCheckResult:
             if url is not None or result is not None:
                 raise TypeError("Result object may be constructed either by package or by URL, but both are provided")
             return
-        if url is None or result is None:
-            raise TypeError("Either URL or result not provided")
+        if url is None:
+            raise TypeError(" URL not provided")
+        if result is None:
+            raise TypeError("Result not provided")
 
         self._timestamp: float = time.time()
         self._url: URL = url
@@ -60,3 +62,13 @@ class WebsiteCheckResult:
             response_time_string = f"{self._response_time:.{self.precision}f}"
         return f"{self._timestamp:.{self.precision}f},{self._url}," \
                f"{self._result},{response_time_string},{self._regex_result  or ''}"
+
+    def __eq__(self, other):
+        if isinstance(other, self.__class__):
+            return self._timestamp == other._timestamp and \
+                   self._result == other._result and \
+                   self._url == other._url and \
+                   self._response_time == other._response_time and \
+                   self._regex_result == other._regex_result
+        else:
+            return False
