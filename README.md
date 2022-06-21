@@ -1,5 +1,5 @@
 # Website Monitor System 
-Website Monitor System (WMS) monitors the state of websites and logs it into a database. It is a homework for Aiven Backend developer position and an exercise of asyncio. The system consists of two parts:
+Website Monitor System (WMS) monitors the state of websites and logs it into a database. It is an exercise of asyncio. The system consists of two parts:
 - Producer - monitors websites listed in `websites.json` asynchronously and sends the status packages to Kafka topic `website_check`. It is in the `producer` folder
 - Consumer - asynchronously consumes packages and sends them to `results_log` table of `check_results` database. It is in the `consumer` folder
 there are `shared` folder - a small library to store check results and `resources` folder - where all user defined data is kept.
